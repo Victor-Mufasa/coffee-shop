@@ -1,12 +1,11 @@
-// App.jsx - Minimal Tailwind version
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router";
 import HomePage from "./pages/HomePage.jsx";
+import ShopPage from "./pages/ShopPage.jsx";
 import "./index.css";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   // GET - Fetch coffee products
   useEffect(() => {
@@ -66,7 +65,10 @@ function App() {
       <div className="min-h-screen bg-amber-50 text-amber-950">
         <nav className="bg-amber-950 text-amber-50 sticky top-0 z-50 shadow">
           <div className="p-4 flex justify-between items-center">
-            <Link to="/" className="flex justify-center items-center gap-2 text-xl font-bold">
+            <Link
+              to="/"
+              className="flex justify-center items-center gap-2 text-xl font-bold"
+            >
               Coffee Shop
             </Link>
             <div className="flex gap-1">
@@ -113,6 +115,10 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<HomePage />} />
+            <Route
+              path="/shop"
+              element={<ShopPage products={products} />}
+            />
           </Routes>
         </main>
       </div>
