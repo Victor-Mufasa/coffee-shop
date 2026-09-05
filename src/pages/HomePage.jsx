@@ -1,4 +1,3 @@
-// HomePage.jsx - Minimal Tailwind version
 import { Link } from "react-router";
 
 function HomePage() {
