@@ -1,16 +1,163 @@
-# React + Vite
+# Coffee Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application for managing a coffee shop inventory with CRUD operations. This project is designed for beginners learning React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Features](#features)
 
-## React Compiler
+- [Tech Stack](#tech-stack)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Local Setup](#local-setup)
 
-## Expanding the ESLint configuration
+- [Usage Guide](#usage-guide)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Testing](#testing)
+
+- [Screenshots](#screenshots)
+
+- [Contact](#contact)
+
+- [License](#license)
+
+## Features
+
+1. Home Page - Landing page with hero section and feature highlights
+
+2. Shop Page - Browse coffee products with search functionality
+
+3. Admin Portal - Complete CRUD operations for coffee products:
+
+- Add new coffee products
+
+- Edit existing products
+
+- Delete products
+
+## Tech Stack
+
+- Vite+React
+
+- React Router v7
+
+- Tailwind CSS
+
+- JSON Server
+
+## Local Setup
+
+- Node.js
+- node package manager(npm)
+
+### Installation
+
+1. Clone the repository
+
+```bash
+git clone <https://github.com/Victor-Mufasa/coffee-shop>
+```
+
+2. Navigate into the coffee-shop folder
+
+```bash
+cd coffee-shop
+```
+
+3. Install dependencies
+
+```bash
+npm install
+```
+
+4. Start the json server
+
+```bash
+npm run server
+```
+
+5. Start the developments server
+
+```bash
+npm run dev
+```
+
+6. Open your browser
+
+Visit <http://localhost:5173>
+
+## Usage Guide
+
+### HomePage
+
+- Hero section with call-to-action
+
+- Three feature cards (Global Sourcing, Fresh Roasting, Sustainable)
+
+### ShopPage
+
+- Search bar for filtering products
+
+- Grid display of coffee products
+
+- Product cards with name, description, origin and price
+
+### AdminPage
+
+- Add/Edit product form
+
+- Inventory list with Edit and Delete buttons
+
+- Form validation for required fields
+
+### Search Functionality
+
+- Search by product name
+
+- Search by origin
+
+- Search by description
+
+- Real-time filtering as you type
+
+## Testing
+
+To test the application:
+
+1. Ensure JSON Server is running (npm run server)
+
+2. Run the development server (npm run dev)
+
+3. Test all CRUD operations:
+
+- Create a new product
+
+- Edit existing products
+
+- Delete products
+
+- Search for products
+
+## Screenshots
+
+![Home](./src/assets/HomePage.png)
+
+![Shop](./src/assets/ShopPage.png)
+
+![Admin](./src/assets/AdminPage.png)
+
+## Contact
+
+For any feedback questions or improvements ideas feel free to reach out at:
+
+<victorkipkemboi241@gmail.com> or
+<rickvick142@gmail.com>
+
+## License
+
+Copyright &copy; 2026 Victor Kipkemboi
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
