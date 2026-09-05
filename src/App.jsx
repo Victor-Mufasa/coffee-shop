@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router";
 import HomePage from "./pages/HomePage.jsx";
 import ShopPage from "./pages/ShopPage.jsx";
+import AdminPage from "./pages/AdminPage.jsx";
 import "./index.css";
 
 function App() {
@@ -13,11 +14,9 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
-        setLoading(false);
       })
       .catch((err) => {
         console.error("Error:", err);
-        setLoading(false);
       });
   }, []);
 
@@ -119,6 +118,14 @@ function App() {
               path="/shop"
               element={<ShopPage products={products} />}
             />
+            <Route path="/admin" element={
+              <AdminPage 
+                products={products}
+                onAdd={addProduct}
+                onUpdate={updateProduct}
+                onDelete={deleteProduct}
+              />
+            } />
           </Routes>
         </main>
       </div>
