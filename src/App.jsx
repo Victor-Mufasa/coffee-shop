@@ -1,122 +1,123 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+// App.jsx - Minimal Tailwind version
+import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router";
+import HomePage from "./pages/HomePage.jsx";
+import "./index.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // GET - Fetch coffee products
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Error:", err);
+        setLoading(false);
+      });
+  }, []);
+
+  // POST - Add product
+  const addProduct = (newProduct) => {
+    fetch("http://localhost:3000/products", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newProduct),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts([...products, data]);
+      })
+      .catch((err) => console.error("Error:", err));
+  };
+
+  // PUT - Update product
+  const updateProduct = (id, updatedData) => {
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(updatedData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(products.map((p) => (p.id === id ? data : p)));
+      })
+      .catch((err) => console.error("Error:", err));
+  };
+
+  // DELETE - Remove product
+  const deleteProduct = (id) => {
+    fetch(`http://localhost:3000/products/${id}`, {
+      method: "DELETE",
+    })
+      .then(() => {
+        setProducts(products.filter((p) => p.id !== id));
+      })
+      .catch((err) => console.error("Error:", err));
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <BrowserRouter>
+      <div className="min-h-screen bg-amber-50 text-amber-950">
+        <nav className="bg-amber-950 text-amber-50 sticky top-0 z-50 shadow">
+          <div className="p-4 flex justify-between items-center">
+            <Link to="/" className="flex justify-center items-center gap-2 text-xl font-bold">
+              Coffee Shop
+            </Link>
+            <div className="flex gap-1">
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `px-3 py-1 rounded text-sm font-medium ${
+                    isActive
+                      ? "bg-amber-50/20 text-white"
+                      : "text-amber-300 hover:text-white"
+                  }`
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/shop"
+                className={({ isActive }) =>
+                  `px-3 py-1 rounded text-sm font-medium ${
+                    isActive
+                      ? "bg-amber-50/20 text-white"
+                      : "text-amber-300 hover:text-white"
+                  }`
+                }
+              >
+                Shop
+              </NavLink>
+              <NavLink
+                to="/admin"
+                className={({ isActive }) =>
+                  `px-3 py-1 rounded text-sm font-medium ${
+                    isActive
+                      ? "bg-amber-50/20 text-white"
+                      : "text-amber-300 hover:text-white"
+                  }`
+                }
+              >
+                Admin Portal
+              </NavLink>
+            </div>
+          </div>
+        </nav>
 
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

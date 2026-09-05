@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ethiopian Yirgacheffe",
+      "description": "Bright and fruity with floral notes and a smooth, clean finish.",
+      "origin": "Ethiopia",
+      "price": 18.99,
+      "location": "Africa"
+    },
+    {
+      "id": 2,
+      "name": "Colombian Supremo",
+      "description": "Rich and balanced with caramel sweetness and a hint of nuttiness.",
+      "origin": "Colombia",
+      "price": 16.50,
+      "location": "South America"
+    },
+    {
+      "id": 3,
+      "name": "Sumatran Mandheling",
+      "description": "Earthy and full-bodied with dark chocolate and spice undertones.",
+      "origin": "Indonesia",
+      "price": 19.99,
+      "location": "Asia"
+    },
+    {
+      "id": 4,
+      "name": "Kenyan AA",
+      "description": "Bright acidity with bold flavors of blackberry and citrus.",
+      "origin": "Kenya",
+      "price": 21.50,
+      "location": "Africa"
+    },
+    {
+      "id": 5,
+      "name": "Costa Rican Tarrazu",
+      "description": "Smooth and bright with chocolate and citrus notes.",
+      "origin": "Costa Rica",
+      "price": 17.25,
+      "location": "Central America"
+    },
+    {
+      "id": 6,
+      "name": "Jamaican Blue Mountain",
+      "description": "Mild and smooth with a sweet, clean flavor and no bitterness.",
+      "origin": "Jamaica",
+      "price": 34.99,
+      "location": "Caribbean"
+    }
+  ]
+}
