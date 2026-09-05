@@ -54,7 +54,7 @@ A simple React application for managing a coffee shop inventory with CRUD operat
 1. Clone the repository
 
 ```bash
-git clone <https://github.com/Victor-Mufasa/coffee-shop>
+git clone https://github.com/Victor-Mufasa/coffee-shop
 ```
 
 2. Navigate into the coffee-shop folder
