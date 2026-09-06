@@ -107,6 +107,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   type="number"
                   placeholder="0.00"
                   value={form.price}
+                  step={0.01}
                   onChange={handleChange}
                   className="w-full p-2 border rounded"
                   required
