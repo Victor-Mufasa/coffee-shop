@@ -3,7 +3,6 @@ import { Routes, Route, Link, NavLink } from "react-router";
 import HomePage from "./pages/HomePage.jsx";
 import ShopPage from "./pages/ShopPage.jsx";
 import AdminPage from "./pages/AdminPage.jsx";
-import "./index.css";
 
 function App() {
   const [products, setProducts] = useState([]);
