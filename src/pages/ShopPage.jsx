@@ -15,7 +15,6 @@ function ShopPage({ products }) {
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Our Coffee Selection</h2>
         <div className="flex items-center bg-white border rounded px-2">
-          <span>🔍</span>
           <input
             type="text"
             placeholder="Search Coffee..."
