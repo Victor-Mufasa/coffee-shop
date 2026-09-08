@@ -71,7 +71,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                 <label className="block text-sm font-medium mb-1">Coffee Name</label>
                 <input
                   name="name"
-                  placeholder="Type Here"
+                  placeholder="e.g. Kenyan AA"
                   value={form.name}
                   onChange={handleChange}
                   className="w-full p-2 border rounded-2xl"
@@ -82,7 +82,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                 <label className="block text-sm font-medium mb-1">Origin</label>
                 <input
                   name="origin"
-                  placeholder="Type Here"
+                  placeholder="e.g. Kenya"
                   value={form.origin}
                   onChange={handleChange}
                   className="w-full p-2 border rounded-2xl"
@@ -93,7 +93,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                 <label className="block text-sm font-medium mb-1">Location</label>
                 <input
                   name="location"
-                  placeholder="Type Here"
+                  placeholder="Africa"
                   value={form.location}
                   onChange={handleChange}
                   className="w-full p-2 border rounded-2xl"
