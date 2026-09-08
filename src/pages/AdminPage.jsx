@@ -55,7 +55,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
     <div className="min-h-screen max-w-4xl mx-auto p-6 font-sans">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Admin Portal</h2>
-        <button onClick={() => setIsAdding(true)} className="bg-amber-600 text-white px-4 py-2 rounded-2xl font-semibold hover:bg-amber-700">
+        <button onClick={() => setIsAdding(true)} className="bg-amber-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-amber-700">
           Add Coffee
         </button>
       </div>
@@ -74,7 +74,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="e.g. Kenyan AA"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded-2xl"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -85,7 +85,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="e.g. Kenya"
                   value={form.origin}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded-2xl"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -96,7 +96,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="Africa"
                   value={form.location}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded-2xl"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -109,7 +109,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   value={form.price}
                   step={0.01}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded-2xl"
+                  className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                   required
                 />
               </div>
@@ -122,15 +122,15 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                 value={form.description}
                 onChange={handleChange}
                 rows="3"
-                className="w-full p-2 border rounded-2xl"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
                 required
               />
             </div>
             <div className="flex gap-2 mt-4">
-              <button type="submit" className="bg-amber-600 text-white px-6 py-2 font-semibold hover:bg-amber-700 rounded-2xl">
+              <button type="submit" className="bg-amber-500 text-white px-6 py-2 font-semibold hover:bg-amber-600 rounded-md">
                 {editingId ? 'Update' : 'Submit'}
               </button>
-              <button type="button" onClick={cancelForm} className="bg-gray-200 text-gray-800 px-6 py-2 rounded-3xl font-semibold hover:bg-gray-300">
+              <button type="button" onClick={cancelForm} className="bg-gray-100 text-gray-800 px-6 py-2 rounded-md font-semibold hover:bg-gray-300">
                 Cancel
               </button>
             </div>
@@ -142,21 +142,20 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
         <h3 className="font-bold text-lg mb-3">Current Inventory</h3>
         <div className="grid md:grid-cols-2 gap-3">
           {products.map(p => (
-            <div key={p.id} className="bg-white p-3 rounded shadow flex justify-between items-center">
+            <div key={p.id} className="bg-white p-3 rounded-2xl shadow flex justify-between items-center">
               <div className="flex items-center gap-2">
-                <span className="text-2xl">☕</span>
                 <div>
                   <div className="font-bold">{p.name}</div>
                   <div className="text-gray-500 text-sm">{p.origin} · {p.location}</div>
                 </div>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-2">
                 <span className="text-amber-700 font-bold mr-1">${p.price.toFixed(2)}</span>
                 <button onClick={() => startEdit(p)} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate">
                   Edit
                 </button>
                 <button onClick={() => onDelete(p.id)} className="rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-medium text-rose-700 transition hover:border-rose-300 hover:bg-rose-100">
-                  Del
+                  Delete
                 </button>
               </div>
             </div>

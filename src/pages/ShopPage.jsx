@@ -14,7 +14,7 @@ function ShopPage({ products }) {
     <div className="max-w-4xl mx-auto p-6 font-sans">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Our Coffee Selection</h2>
-        <div className="flex items-center bg-white border rounded-full px-2">
+        <div className="flex items-center bg-white border rounded-2xl px-2">
           <input
             type="text"
             placeholder="Search Coffee..."
@@ -29,7 +29,7 @@ function ShopPage({ products }) {
         {filtered.map((p) => (
           <div key={p.id} className="bg-white rounded-2xl shadow p-7">
             <div className="text-center text-4xl relative bg-gray-100 rounded p-4">
-              <span className="top-2 right-2 bg-black/70 text-white text-xs px-2 py-0.5 rounded-full">
+              <span className="top-2 right-2 bg-black/70 text-white text-xs px-2 py-2 rounded-xl">
                 {p.location}
               </span>
             </div>
