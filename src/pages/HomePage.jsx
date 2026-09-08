@@ -2,8 +2,8 @@ import { Link } from "react-router";
 
 function HomePage() {
   return (
-    <div className="p-4">
-      <div className="bg-linear-to-br from-amber-900 to-amber-950 rounded-2xl p-8 grid md:grid-cols-2 gap-6 items-center mb-8 justify-center">
+    <div className="max-w-4xl mx-auto p-6 font-sans">
+      <div className="bg-linear-to-br from-amber-900 to-amber-950 rounded-2xl p-8 grid gap-6 mb-8 justify-center">
         <div>
           <h1 className="text-3xl md:text-4xl font-bold text-amber-50">
             The go to store for your<br />coffee needs

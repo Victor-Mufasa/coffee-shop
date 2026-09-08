@@ -11,7 +11,7 @@ function ShopPage({ products }) {
   );
 
   return (
-    <div className="p-4">
+    <div className="max-w-4xl mx-auto p-6 font-sans">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Our Coffee Selection</h2>
         <div className="flex items-center bg-white border rounded px-2">

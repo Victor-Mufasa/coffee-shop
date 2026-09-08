@@ -52,7 +52,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
   };
 
   return (
-    <div className="p-4">
+    <div className="min-h-screen max-w-4xl mx-auto p-6 font-sans">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Admin Portal</h2>
         <button onClick={() => setIsAdding(true)} className="bg-amber-600 text-white px-4 py-2 rounded font-semibold hover:bg-amber-700">
