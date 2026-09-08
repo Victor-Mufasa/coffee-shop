@@ -74,7 +74,7 @@ function App() {
               className={({ isActive }) =>
                 `px-3 py-1 rounded text-sm font-medium ${
                   isActive
-                    ? "bg-amber-50/20 text-white"
+                    ? "bg-amber-100 text-black"
                     : "text-amber-300 hover:text-white"
                 }`
               }
@@ -86,7 +86,7 @@ function App() {
               className={({ isActive }) =>
                 `px-3 py-1 rounded text-sm font-medium ${
                   isActive
-                    ? "bg-amber-50/20 text-white"
+                    ? "bg-amber-100 text-black"
                     : "text-amber-300 hover:text-white"
                 }`
               }
@@ -98,12 +98,12 @@ function App() {
               className={({ isActive }) =>
                 `px-3 py-1 rounded text-sm font-medium ${
                   isActive
-                    ? "bg-amber-50/20 text-white"
+                    ? "bg-amber-100 text-black"
                     : "text-amber-300 hover:text-white"
                 }`
               }
             >
-              Admin Portal
+              Admin
             </NavLink>
           </div>
         </div>

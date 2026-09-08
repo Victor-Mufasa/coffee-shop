@@ -152,10 +152,10 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
               </div>
               <div className="flex items-center gap-1">
                 <span className="text-amber-700 font-bold mr-1">${p.price.toFixed(2)}</span>
-                <button onClick={() => startEdit(p)} className="w-8 h-9 bg-gray-200 rounded-2xl hover:bg-gray-300">
+                <button onClick={() => startEdit(p)} className="rounded-full border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition hover:border-slate-300 hover:bg-slate">
                   Edit
                 </button>
-                <button onClick={() => onDelete(p.id)} className="w-12 h-9 bg-rose-100 text-rose-600 rounded-3xl hover:bg-rose-200">
+                <button onClick={() => onDelete(p.id)} className="rounded-full border border-rose-200 bg-rose-50 px-3 py-1.5 text-xs font-medium text-rose-700 transition hover:border-rose-300 hover:bg-rose-100">
                   Del
                 </button>
               </div>

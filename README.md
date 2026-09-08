@@ -90,13 +90,13 @@ Visit <http://localhost:5173>
 
 ## Usage Guide
 
-### HomePage
+### Home Page
 
 - Hero section with call-to-action
 
 - Three feature cards (Global Sourcing, Fresh Roasting, Sustainable)
 
-### ShopPage
+### Shop Page
 
 - Search bar for filtering products
 
@@ -104,7 +104,7 @@ Visit <http://localhost:5173>
 
 - Product cards with name, description, origin and price
 
-### AdminPage
+### Admin Page
 
 - Add/Edit product form
 
