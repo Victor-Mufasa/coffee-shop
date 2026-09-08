@@ -3,11 +3,11 @@ import { Link } from "react-router";
 function HomePage() {
   return (
     <div className="max-w-4xl mx-auto p-6 font-sans">
-      <div className="bg-linear-to-br from-amber-900 to-amber-950 rounded-2xl p-8 grid gap-6 mb-8 justify-center">
+      <div className="bg-linear-to-br bg-amber-900 rounded-2xl p-8 grid gap-6 mb-8 justify-center">
         <div>
-          <h1 className="text-3xl md:text-4xl font-bold text-amber-50">
+          <h2 className="text-3xl md:text-4xl font-bold text-amber-50">
             The go to store for your<br />coffee needs
-          </h1>
+          </h2>
           <p className="text-amber-200 text-lg mt-2">
             Discover the finest coffee beans from around the world.
           </p>

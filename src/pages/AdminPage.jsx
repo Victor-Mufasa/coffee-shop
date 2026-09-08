@@ -55,13 +55,13 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
     <div className="min-h-screen max-w-4xl mx-auto p-6 font-sans">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-bold">Admin Portal</h2>
-        <button onClick={() => setIsAdding(true)} className="bg-amber-600 text-white px-4 py-2 rounded font-semibold hover:bg-amber-700">
+        <button onClick={() => setIsAdding(true)} className="bg-amber-600 text-white px-4 py-2 rounded-2xl font-semibold hover:bg-amber-700">
           Add Coffee
         </button>
       </div>
 
       {isAdding && (
-        <div className="bg-white p-4 rounded shadow mb-6">
+        <div className="bg-white p-4 rounded-2xl shadow mb-6">
           <h3 className="text-lg font-bold mb-3">
             {editingId ? 'Edit Coffee' : 'Add New Coffee'}
           </h3>
@@ -74,7 +74,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="Type Here"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded-2xl"
                   required
                 />
               </div>
@@ -85,7 +85,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="Type Here"
                   value={form.origin}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded-2xl"
                   required
                 />
               </div>
@@ -96,7 +96,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   placeholder="Type Here"
                   value={form.location}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded-2xl"
                   required
                 />
               </div>
@@ -109,7 +109,7 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                   value={form.price}
                   step={0.01}
                   onChange={handleChange}
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 border rounded-2xl"
                   required
                 />
               </div>
@@ -122,15 +122,15 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
                 value={form.description}
                 onChange={handleChange}
                 rows="3"
-                className="w-full p-2 border rounded"
+                className="w-full p-2 border rounded-2xl"
                 required
               />
             </div>
             <div className="flex gap-2 mt-4">
-              <button type="submit" className="bg-amber-600 text-white px-6 py-2 rounded font-semibold hover:bg-amber-700">
+              <button type="submit" className="bg-amber-600 text-white px-6 py-2 font-semibold hover:bg-amber-700 rounded-2xl">
                 {editingId ? 'Update' : 'Submit'}
               </button>
-              <button type="button" onClick={cancelForm} className="bg-gray-200 text-gray-800 px-6 py-2 rounded font-semibold hover:bg-gray-300">
+              <button type="button" onClick={cancelForm} className="bg-gray-200 text-gray-800 px-6 py-2 rounded-3xl font-semibold hover:bg-gray-300">
                 Cancel
               </button>
             </div>
@@ -152,11 +152,11 @@ function AdminPage({ products, onAdd, onUpdate, onDelete }) {
               </div>
               <div className="flex items-center gap-1">
                 <span className="text-amber-700 font-bold mr-1">${p.price.toFixed(2)}</span>
-                <button onClick={() => startEdit(p)} className="w-8 h-9 bg-gray-200 rounded hover:bg-gray-300">
+                <button onClick={() => startEdit(p)} className="w-8 h-9 bg-gray-200 rounded-2xl hover:bg-gray-300">
                   Edit
                 </button>
-                <button onClick={() => onDelete(p.id)} className="w-12 h-9 bg-rose-100 text-rose-600 rounded hover:bg-rose-200">
-                  Delete
+                <button onClick={() => onDelete(p.id)} className="w-12 h-9 bg-rose-100 text-rose-600 rounded-3xl hover:bg-rose-200">
+                  Del
                 </button>
               </div>
             </div>

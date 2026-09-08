@@ -13,7 +13,7 @@
       "name": "Colombian Supremo",
       "description": "Rich and balanced with caramel sweetness and a hint of nuttiness.",
       "origin": "Colombia",
-      "price": 16.50,
+      "price": 16.5,
       "location": "South America"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Kenyan AA",
       "description": "Bright acidity with bold flavors of blackberry and citrus.",
       "origin": "Kenya",
-      "price": 21.50,
+      "price": 21.5,
       "location": "Africa"
     },
     {
