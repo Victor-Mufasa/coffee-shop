@@ -1,6 +1,6 @@
 # Coffee Shop
 
-A simple React application for managing a coffee shop inventory with CRUD operations. This project is designed for beginners learning React and Tailwind CSS.
+A web application for managing a coffee shop inventory with CRUD operations
 
 ## Table of Contents
 
@@ -46,8 +46,11 @@ A simple React application for managing a coffee shop inventory with CRUD operat
 
 ## Local Setup
 
+### Reequirements
+
 - Node.js
 - node package manager(npm)
+- A modern web browser
 
 ### Installation
 
