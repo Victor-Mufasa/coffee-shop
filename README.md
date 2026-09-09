@@ -42,8 +42,6 @@ A web application for managing a coffee shop inventory with CRUD operations
 
 - Tailwind CSS
 
-- JSON Server
-
 ## Local Setup
 
 ### Reequirements
